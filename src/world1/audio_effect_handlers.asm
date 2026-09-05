@@ -322,9 +322,5 @@ Bank0_Func_E8FA:
 Bank0_Label_E91F:
     RTS
     .byte $A9, $08, $D0, $CE, $A9, $10, $D0, $CA, $4C, $FA, $E8, $4C, $24, $E9, $4C, $FA
-    .byte $E8, $8F, $80, $FC, $08, $87, $00, $FC
-    PHP
-    STA a:$FC80
-    ASL $85
-    BRK
-    .byte $FB, $06, $8B, $80, $FC, $04, $83, $00, $FA, $04
+    .byte $E8, $8F, $80, $FC, $08, $87, $00, $FC, $08, $8D, $80, $FC, $06, $85, $00, $FB
+    .byte $06, $8B, $80, $FC, $04, $83, $00, $FA, $04

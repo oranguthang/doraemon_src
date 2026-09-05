@@ -181,7 +181,7 @@ Bank0_Func_E7C3:
     LDA #$DF
     LDX #$8C
     JSR World1_Apu_WritePulse2ControlSweep
-    LDA a:$E7F2,Y
+    LDA a:World1_AudioEffectPitchPeriods,Y
     TAX
     LDA a:$E7F3,Y
     ORA #$88
@@ -195,14 +195,13 @@ Bank0_Label_E7EE:
 
 Bank0_Label_E7EF:
     JMP World1_Audio_StopCurrentEffect
+
+World1_AudioEffectPitchPeriods:
     .byte $00, $06, $00, $03, $00, $02, $40, $01, $C0, $00, $80, $00, $60, $00, $50, $00
-    .byte $2B, $03, $35, $00, $2C, $03, $33, $06, $2B, $03
-    AND $00,X
-    BIT a:$3303
-    ASL $2B
-    .byte $03, $35, $00, $2C, $03, $33, $06, $2B, $03, $35, $00, $2C, $03, $33, $06, $69
-    .byte $00, $70, $00, $76, $00, $7E, $00, $85, $00, $8D, $00, $96, $00, $9F, $00, $A8
-    .byte $00, $B2, $00, $BD, $00, $C8, $00, $D4, $00
+    .byte $2B, $03, $35, $00, $2C, $03, $33, $06, $2B, $03, $35, $00, $2C, $03, $33, $06
+    .byte $2B, $03, $35, $00, $2C, $03, $33, $06, $2B, $03, $35, $00, $2C, $03, $33, $06
+    .byte $69, $00, $70, $00, $76, $00, $7E, $00, $85, $00, $8D, $00, $96, $00, $9F, $00
+    .byte $A8, $00, $B2, $00, $BD, $00, $C8, $00, $D4, $00
 
 Bank0_Func_E83C:
     LDA #$10

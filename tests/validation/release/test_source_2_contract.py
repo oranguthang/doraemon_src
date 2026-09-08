@@ -24,7 +24,7 @@ class Source2ContractTests(unittest.TestCase):
         self.assertNotIn("contract", document)
         self.assertEqual(document["release"]["version"], "2.0")
         self.assertEqual(document["tag"], "source-reconstruction-2.0")
-        self.assertEqual(document["status"], "development")
+        self.assertEqual(document["status"], "tag-ready")
         self.assertEqual(
             document["predecessor"]["commit"],
             "169d13093a314a630c881129e9d857381fca3a02",

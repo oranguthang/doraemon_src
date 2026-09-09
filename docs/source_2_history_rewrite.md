@@ -4,6 +4,12 @@ The candidate rewrites unpublished Source 2.0 drafts from local `main` without c
 
 Each candidate commit groups retained files by their final owner. Its author and committer dates use the latest source timestamp represented by that group. Equal timestamps occur where one draft commit was split across several owners; this preserves the original second-level timestamp while keeping both date sequences in parent order. Empty or fully superseded drafts have no candidate commit.
 
+## Retained-reference boundary
+
+The candidate history audit starts after `169d13093a314a630c881129e9d857381fca3a02` and includes every later candidate commit, introduced blob, and the final tree. Local `main`, remote-tracking references, existing tags, and the original draft branches remain unchanged for owner review.
+
+The published predecessor history retains legacy release metadata that no longer matches the project-owned schema. That published-history cleanup is explicitly deferred for separate owner coordination; it is neither altered nor claimed as candidate evidence by this rewrite.
+
 ## Candidate schedule
 
 | Candidate | Scope | Author date | Commit date |
